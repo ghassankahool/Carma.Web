@@ -1,0 +1,14 @@
+[
+  {
+    "outputFileName": "Scripts/app/users-manager.min.js",
+    "inputFiles": [
+      "Scripts/app/users-manager.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/assets/css/bootstrap.min.css",
+    "inputFiles": [
+      "Content/assets/css/bootstrap.css"
+    ]
+  }
+]

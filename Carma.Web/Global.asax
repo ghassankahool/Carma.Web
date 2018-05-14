@@ -2,6 +2,7 @@
 <%@ Import Namespace="Carma.Web" %>
 <%@ Import Namespace="System.Web.Optimization" %>
 <%@ Import Namespace="System.Web.Routing" %>
+<%@ Import Namespace="System.Web.Http" %>
 
 <script runat="server">
 
@@ -9,6 +10,7 @@
     {
         RouteConfig.RegisterRoutes(RouteTable.Routes);
         BundleConfig.RegisterBundles(BundleTable.Bundles);
+        GlobalConfiguration.Configure(WebApiConfig.Register);
     }
 
 </script>

@@ -6,24 +6,29 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
-
+    <title><%: Page.Title %> - Carma Web Test</title>
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link rel="stylesheet" href="/Content/assets/css/bootstrap.min.css?v=1.1" />
+    <link rel="stylesheet" href="/Content/assets/css/jquery.gritter.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/Content/assets/css/ace-fonts.min.css" />
+    <link rel="stylesheet" href="/Content/assets/css/ace.min.css?v=1" />
+    <link rel="stylesheet" href="/Content/assets/css/ace-skins.min.css" />
+    <link rel="stylesheet" href="/Content/assets/css/bootstrap-datepicker3.min.css" />
+    <link href="/Scripts/smoke/css/smoke.min.css" rel="stylesheet" />
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-    <webopt:bundlereference runat="server" path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 </head>
 <body>
-    <form runat="server">
+    <form runat="server" id="aspnetForm">
         <asp:ScriptManager runat="server">
             <Scripts>
-                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
-                <%--Framework Scripts--%>
                 <asp:ScriptReference Name="MsAjaxBundle" />
                 <asp:ScriptReference Name="jquery" />
-                <asp:ScriptReference Name="bootstrap" />
+                <%--<asp:ScriptReference Name="bootstrap" />--%>
                 <asp:ScriptReference Name="respond" />
                 <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
                 <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
@@ -34,10 +39,23 @@
                 <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
                 <asp:ScriptReference Name="WebFormsBundle" />
-                <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
 
+        <script src="/Content/assets/js/ace-extra.min.js"></script>
+        <script src="/Content/assets/js/date-time/moment.min.js"></script>
+        <script src="/Content/assets/js/dataTables/jquery.dataTables.min.js"></script>
+        <script src="/Content/assets/js/dataTables/jquery.dataTables.bootstrap.min.js"></script>
+        <script src="/Content/assets/js/dataTables/extensions/Buttons/js/dataTables.buttons.min.js"></script>
+        <script src="/Content/assets/js/dataTables/extensions/Buttons/js/buttons.flash.min.js"></script>
+        <script src="/Content/assets/js/dataTables/extensions/Buttons/js/buttons.html5.min.js"></script>
+        <script src="/Content/assets/js/dataTables/extensions/Buttons/js/buttons.print.min.js"></script>
+        <script src="/Content/assets/js/dataTables/extensions/Buttons/js/buttons.colVis.min.js"></script>
+        <script src="/Content/assets/js/dataTables/extensions/Select/js/dataTables.select.min.js"></script>
+        <script src="/Content/assets/js/chosen.jquery.min.js"></script>
+        <script src="/Scripts/smoke/js/smoke.min.js"></script>
+
+        <asp:ContentPlaceHolder ID="Header" runat="server" />
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -46,13 +64,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
+                    <a class="navbar-brand" runat="server" href="~/">Carma Web</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                        <%--<li><a runat="server" href="~/About">About</a></li>--%>
+                        <li><a runat="server" href="~/Employees">Employees</a></li>
+                        <%--<li><a runat="server" href="~/Contact">Contact</a></li>--%>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
@@ -74,13 +92,43 @@
             </div>
         </div>
         <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <p>&copy; <%: DateTime.Now.Year %> - Carma Web App</p>
             </footer>
         </div>
     </form>
+
+    <script src="/Content/assets/js/bootstrap.min.js"></script>
+    <!--[if lte IE 8]>
+          <script src="/Content/assets/js/excanvas.min.js"></script>
+    <![endif]-->
+    <script src="/Content/assets/js/jquery-ui.custom.min.js"></script>
+    <script src="/Content/assets/js/jquery.ui.touch-punch.min.js"></script>
+    <script src="/Content/assets/js/jquery.gritter.min.js"></script>
+    <script src="/Content/assets/js/ace/elements.scroller.min.js"></script>
+    <script src="/Content/assets/js/ace/elements.colorpicker.min.js"></script>
+    <script src="/Content/assets/js/date-time/bootstrap-datepicker.min.js"></script>
+    <script src="/Content/assets/js/date-time/bootstrap-datetimepicker.min.js"></script>
+    <script src="/Content/assets/js/ace/elements.fileinput.min.js"></script>
+    <script src="/Content/assets/js/ace/elements.spinner.min.js"></script>
+    <script src="/Content/assets/js/ace/elements.aside.min.js"></script>
+    <script src="/Content/assets/js/ace/ace.min.js"></script>
+    <script src="/Content/assets/js/ace/ace.ajax-content.min.js"></script>
+    <script src="/Content/assets/js/ace/ace.touch-drag.min.js"></script>
+    <script src="/Content/assets/js/ace/ace.sidebar.min.js"></script>
+    <script src="/Content/assets/js/ace/ace.sidebar-scroll-1.min.js"></script>
+    <script src="/Content/assets/js/ace/ace.submenu-hover.min.js"></script>
+    <script src="/Content/assets/js/ace/ace.widget-box.min.js"></script>
+    <script src="/Content/assets/js/ace/ace.settings.min.js"></script>
+    <script src="/Content/assets/js/ace/ace.settings-rtl.min.js"></script>
+    <script src="/Content/assets/js/ace/ace.settings-skin.min.js"></script>
+    <script src="/Content/assets/js/ace/ace.widget-on-reload.min.js"></script>
+    <script src="/Content/assets/js/ace/ace.searchbox-autocomplete.min.js"></script>
+    <script src="/Scripts/app/app-master.min.js"></script>
+    <script src="/Content/assets/js/bootbox.js"></script>
+
+    <script src="/Scripts/app/imagesManager.js?v=2.9122"></script>
 </body>
 </html>
