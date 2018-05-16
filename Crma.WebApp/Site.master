@@ -128,7 +128,7 @@
     <script src="/Content/assets/js/ace/ace.searchbox-autocomplete.min.js"></script>
     <script src="/Scripts/app/app-master.min.js"></script>
     <script src="/Content/assets/js/bootbox.js"></script>
-
     <script src="/Scripts/app/imagesManager.js?v=2.9122"></script>
+    <asp:ContentPlaceHolder runat="server" ID="PageScripts" />
 </body>
 </html>

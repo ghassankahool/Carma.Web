@@ -30,8 +30,7 @@ var DefaultGridManager = function () {
             commonManger.deleteDefaultData(deleteModalDialog, formName, successCallback, commonManger.errorException);
         });
     },
-    successCallback = function (data) {
-        data = data.d;
+    successCallback = function (data) {        
         $('#' + modalDialog).modal('hide');
         commonManger.showMessage('Data has been saved:', data.message);
         if (data.Status) {
@@ -47,7 +46,7 @@ var DefaultGridManager = function () {
                aoData.push({ "name": "funName", "value": tableName + '_SelectList' }); /*,{ "name": "names", "value": filterNames }, { "name": "values", "value": filterValues }*/
            },
            "fnServerData": function (sSource, aoData, fnCallback) {
-               dataService.callAjax('GET', aoData, sSource, function (data) { fnCallback(data.d); }, commonManger.errorException);
+               dataService.callAjax('GET', aoData, sSource, function (data) { fnCallback(data); }, commonManger.errorException);
            },
            "iDisplayLength": 50,
            "aaSorting": [], // default none sorting none.

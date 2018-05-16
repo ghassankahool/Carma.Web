@@ -3,6 +3,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="Header" runat="server">
     <link href="Content/assets/css/select2.min.css" rel="stylesheet" />
     <link href="/Scripts/select2/select2-optional.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/content/assets/css/bootstrap-editable.css" />
     <script src="/Scripts/app/Common.js?v=1.30"></script>
     <script src="/Scripts/app/DataService.min.js?v=1.30"></script>
     <script src="/Scripts/app/DefaultGridVariables.min.js?v=1.30"></script>
@@ -35,7 +36,7 @@
                             <table id="listItems" class="table table-striped table-bordered table-hover">
                                 <thead>
                                     <tr>
-                                        <th>Photo</th>
+                                        <th width="35px">Photo</th>
                                         <th>Name</th>
                                         <th>Gender</th>
                                         <th>Class room name</th>
@@ -83,7 +84,10 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label no-padding-right" for="student_image">Photo <span class="text-danger">*</span></label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="col-sm-10 required" required id="student_image" name="student_image" placeholder="student_image" />
+                                        <span class="profile-picture">
+                                            <img class="student_image editable img-responsive" data-placement="right" alt="News photo" src="/public/default.jpg" />
+                                            <input type="hidden" id="student_image" value="" name="student_image" />
+                                        </span>
 
                                     </div>
                                 </div>
@@ -166,10 +170,14 @@
         </div>
     </div>
     <!-- /.delete-modal-dialog -->
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="PageScripts" runat="Server">
+    <script src="/content/assets/js/bootstrap-editable.min.js"></script>
+    <script src="/content/assets/js/ace-editable.min.js"></script>
     <script src="/Scripts/select2/select2.min.js"></script>
     <script src="/Scripts/lz-string/lz-string.min.js"></script>
     <script src="/Scripts/xml2json.js"></script>
     <script src="/Scripts/select2/select2-optinal.js?v=1.3"></script>
-    <script src="/Scripts/app/DefaultGridManager.min.js?v=1.30"></script>
+    <script src="/Scripts/app/DefaultGridManager.js?v=1.30"></script>
     <script src="/Scripts/app/Students-manager.js?v=1.30"></script>
 </asp:Content>

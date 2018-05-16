@@ -149,6 +149,10 @@ namespace Carma.Business.DataAccess
             DataSet dataSet = new DataSet();
             Connection.Open();
             SqlDataAdapter sqlDA = new SqlDataAdapter();
+
+            if (storedProcName == null)
+                return null;
+
             sqlDA.SelectCommand = BuildQueryCommand(storedProcName, parameters);
             sqlDA.Fill(dataSet, tableName);
             Connection.Close();

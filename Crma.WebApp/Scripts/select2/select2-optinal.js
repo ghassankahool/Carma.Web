@@ -7,10 +7,8 @@ var
             pageSize: 10,
             serviceUrl: sUrl + 'getSelect2'
         },
-            getSelect2ResultFormat = function (data, page) {
-
-
-                var dAll = commonManger.comp2json(data.d), // decompress data from server
+            getSelect2ResultFormat = function (data, page) {                
+                var dAll = commonManger.comp2json(data), // decompress data from server
                     resultJson = (dAll['#document']['NewDataSet']['list'] ? dAll['#document']['NewDataSet']['list'] : []), // result data (id, text1)
                     resultCount = (dAll['#document']['NewDataSet']['list1'] ? dAll['#document']['NewDataSet']['list1'].CNT : 0), // results count
                     resultAsArray = $.isArray(resultJson)

@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carma.Business", "Carma.Bus
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Crma.WebApp", "Crma.WebApp\", "{DDDCA298-C79E-4C30-807C-B97E4A91ECFB}"
 	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.1"
 		ProjectReferences = "{d43b58a3-4e44-4bc6-a88f-ac94774c5ee5}|Carma.Business.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_51317"
 		Debug.AspNetCompiler.PhysicalPath = "Crma.WebApp\"

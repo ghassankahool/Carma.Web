@@ -151,10 +151,10 @@ var commonManger = function () {
             dataService.callAjax('Post', JSON.stringify(DTO), sUrl + 'SaveData',
                 function (data) {
                     $(modalDialog).modal('hide');
-                    if (data.d.Status) // show success message if done.
+                    if (data.Status) // show success message if done.
                         success(data);
                     else // show error message
-                        showMessage('خطأ بالحذف:', 'خطأ أثناء الحذف ' + data.d.message);
+                        showMessage('خطأ بالحذف:', 'خطأ أثناء الحذف ' + data.message);
                 }, errorException);
         },
         deleteData = function (modalDialog, success, error, tableName, pKey, value) {
@@ -174,10 +174,10 @@ var commonManger = function () {
             dataService.callAjax('Post', JSON.stringify(DTO), mainServiceUrl + 'Delete_Data',
                 function (data) {
                     $(modalDialog).modal('hide');
-                    if (data.d.Status) // show success message if done.
+                    if (data.Status) // show success message if done.
                         success(data);
                     else // show error message
-                        showMessage('لم تتم عملية الحذف', data.d.message);
+                        showMessage('لم تتم عملية الحذف', data.message);
                 }, errorException);
         },
         deleteMultipleData = function (modalDialog, success, error, tableName, pKey, value) {
@@ -189,10 +189,10 @@ var commonManger = function () {
             dataService.callAjax('Post', JSON.stringify(DTO), mainServiceUrl + 'Delete_Data',
                 function (data) {
                     $(modalDialog).modal('hide');
-                    if (data.d.Status) // show success message if done.
+                    if (data.Status) // show success message if done.
                         success(data);
                     else // show error message
-                        showMessage('لم تتم عملية الحذف', data.d.message);
+                        showMessage('لم تتم عملية الحذف', data.message);
                 }, errorException);
         },
         getDataForUpdate = function (ArrayData, controlid) {
@@ -311,7 +311,7 @@ var commonManger = function () {
             var DTO = { 'values': ParamValues, 'actionName': actionName, 'Parm_names': ParamNames, 'fieldsDetails': fieldsDetails, 'valuesDetails': valuesDetails, 'flage': flage };
             dataService.callAjax('Post', JSON.stringify(DTO), mainServiceUrl + 'SaveDataMasterDetails',
                 function (data) {
-                    commonManger.showMessage('Data saved:', data.d.message);
+                    commonManger.showMessage('Data saved:', data.message);
                     $.fn.afterSave(ParamValues);
                     success(data);
                 }, errorException);
@@ -328,7 +328,8 @@ var commonManger = function () {
                             if (Ctype != "undefined" || Ctype != '') {
                                 if (Ctype == "text" || Ctype == "hidden" || Ctype == "number" || Ctype == "email" || Ctype == "date" || Ctype == "tel") {
                                     if ($(this).hasClass('date-picker')) { // date format
-                                        values.push(changeDateFormat($(this).val()));
+                                        //values.push(changeDateFormat($(this).val()));
+                                        values.push($(this).val());
                                         valuesids.push($(this).attr('id'));
                                     } else {
                                         values.push($(this).val());
@@ -377,7 +378,7 @@ var commonManger = function () {
         },
         // global save data
         saveDefaultData = function (modalDialog, form, success, error) {
-            debugger;
+            
             if (!$.fn.beforeSave()) {
                 return;
             }
@@ -394,17 +395,17 @@ var commonManger = function () {
                 dataService.callAjax('Post', JSON.stringify(DTO), sUrl + 'saveData',
                     function (data) {
                         $(modalDialog).modal('hide');
-                        if (data.d.Status) // show success message if done.
+                        if (data.Status) // show success message if done.
                             success(data);
                         else // show error message
-                            showMessage('Error', data.d.message);
+                            showMessage('Error', data.message);
                         // reset form after saving done. by m.salah 31-1-2015
                         commonManger.ResetControls(formName);
                     }, errorException);
             }
         },
         saveData = function (modalDialog, form, success, error, actionName, flage, afterSave) {
-            debugger;
+            
             var ParamValues = [];
             var ParamNames = [];
             var arrayall = Returncontrolsval(form);
@@ -420,7 +421,6 @@ var commonManger = function () {
             if (isvalidatedForm) {
                 dataService.callAjax('Post', JSON.stringify(DTO), mainServiceUrl + 'saveData',
                     function (data) {
-                        data = data.d;
                         $(modalDialog).modal('hide');
                         if (data.Status) { // show success message if done.
                             success(data); afterSave(data.serializdata);
@@ -443,7 +443,6 @@ var commonManger = function () {
             $('#listItems').dataTable().fnDraw();
         },
         successSaved = function (data) {
-            data = data.d;
             if (data.Status) {
                 commonManger.showMessage('Data saved.', 'Data has been saved..');
                 $('#listItems').dataTable().fnDraw();

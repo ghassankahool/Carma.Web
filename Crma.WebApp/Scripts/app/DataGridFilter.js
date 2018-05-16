@@ -37,7 +37,6 @@ var DefaultGridfilterManager = function () {
             });
         },
         successCallback = function (data) {
-            data = data.d;
             $('#' + modalDialog).modal('hide');
             commonManger.showMessage('Data saved:', data.message);
             if (data.Status) {
