@@ -3,30 +3,30 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Carma.Web", "Carma.Web\", "{FB7E3C99-7451-4750-B925-F7914BD9A149}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carma.Business", "Carma.Business\Carma.Business.csproj", "{D43B58A3-4E44-4BC6-A88F-AC94774C5EE5}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Crma.WebApp", "Crma.WebApp\", "{DDDCA298-C79E-4C30-807C-B97E4A91ECFB}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
 		ProjectReferences = "{d43b58a3-4e44-4bc6-a88f-ac94774c5ee5}|Carma.Business.dll;"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_57646"
-		Debug.AspNetCompiler.PhysicalPath = "Carma.Web\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57646\"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_51317"
+		Debug.AspNetCompiler.PhysicalPath = "Crma.WebApp\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51317\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_57646"
-		Release.AspNetCompiler.PhysicalPath = "Carma.Web\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57646\"
+		Release.AspNetCompiler.VirtualPath = "/localhost_51317"
+		Release.AspNetCompiler.PhysicalPath = "Crma.WebApp\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51317\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "57646"
-		SlnRelativePath = "Carma.Web\"
+		VWDPort = "51317"
+		SlnRelativePath = "Crma.WebApp\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carma.Business", "Carma.Business\Carma.Business.csproj", "{D43B58A3-4E44-4BC6-A88F-AC94774C5EE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,14 +34,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FB7E3C99-7451-4750-B925-F7914BD9A149}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB7E3C99-7451-4750-B925-F7914BD9A149}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FB7E3C99-7451-4750-B925-F7914BD9A149}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB7E3C99-7451-4750-B925-F7914BD9A149}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{D43B58A3-4E44-4BC6-A88F-AC94774C5EE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D43B58A3-4E44-4BC6-A88F-AC94774C5EE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D43B58A3-4E44-4BC6-A88F-AC94774C5EE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D43B58A3-4E44-4BC6-A88F-AC94774C5EE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDDCA298-C79E-4C30-807C-B97E4A91ECFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDDCA298-C79E-4C30-807C-B97E4A91ECFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDDCA298-C79E-4C30-807C-B97E4A91ECFB}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDDCA298-C79E-4C30-807C-B97E4A91ECFB}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

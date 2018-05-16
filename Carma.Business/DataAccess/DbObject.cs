@@ -30,7 +30,7 @@ namespace Carma.Business.DataAccess
         public DbObject()
         {
             // initialize default connection string 
-            connectionString = ConfigurationManager.ConnectionStrings["Aliraqcars.Domain.Properties.Settings.AliraqCarsConnectionString"].ConnectionString;
+            connectionString = ConfigurationManager.ConnectionStrings["sqlConnStr"].ConnectionString;
             Connection = new SqlConnection(connectionString);
         }
 
