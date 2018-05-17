@@ -1,6 +1,6 @@
 # Carma.Web
 Carma First Web App
-In this App:
+##In this App:
 - Stored Procedures and Views in SQL server and 3 tables Students, Classromms and Genders. 
 - WebApi as a web service using c# is used (under Asp.Net web forms project).
 - JQuery,  Bootstrap, Datatables.net control (paging, sorting, instant search, Add, Edit, Delete student).
@@ -9,7 +9,7 @@ In this App:
 - Simple PDF profile generator.
 - All the task operations inside one page.
 
-# How to use it?
+## How to use it?
 - Run the attached SQL script file into SchoolDb (SQL server).
 - Run the following command in Package Manager console windows under Crma.WebApp project.
 - Update the connection string in Web.config file
