@@ -10,9 +10,10 @@ In this App:
 - All the task operations inside one page.
 
 # How to use it?
-1- Run the attached sql script file into SchoolDb.
-2- Run the following command in Package Manager console windows under Crma.WebApp project.
+- Run the attached SQL script file into SchoolDb (SQL server).
+- Run the following command in Package Manager console windows under Crma.WebApp project.
+- Update the connection string in Web.config file
 
-Update-Package -reinstall
+> Update-Package -reinstall
 
 https://docs.microsoft.com/en-us/nuget/consume-packages/reinstalling-and-updating-packages
