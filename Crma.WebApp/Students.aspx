@@ -170,6 +170,62 @@
         </div>
     </div>
     <!-- /.delete-modal-dialog -->
+    <!--Student profile-->
+    <div id="profileModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header no-padding">
+                    <div class="table-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            <span class="white">&times;</span>
+                        </button>
+                        Student Profile
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row" id="st_profile_content">
+                        <div class="col-xs-12 col-sm-12">
+                            <h1 class="hidden">Student Profile</h1>
+                            <img id="student_image_preview" src="public/default.jpg" style="max-width: 400px;" />
+                            <table class="table table-condensed" id="student_profile">
+                                <tr>
+                                    <td><strong>Name</strong></td>
+                                    <td><span class="name"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Gender</strong></td>
+                                    <td><span class="gender_name"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Class room</strong></td>
+                                    <td><span class="classroom_name"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Date of birth</strong></td>
+                                    <td><span id="stu_dob"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Balance</strong></td>
+                                    <td><span class="balance"></span></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div id="st_profile"></div>
+                    </div>
+                </div>
+                <div class="modal-footer no-margin-top">
+                    <button class="btn btn-sm btn-success" id="btnDownloadPDF">
+                        <i class="ace-icon fa fa-file-pdf-o"></i>
+                        Download PDF
+                    </button>
+                    <button class="btn btn-sm btn-danger" data-dismiss="modal">
+                        <i class="ace-icon fa fa-times"></i>
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="PageScripts" runat="Server">
     <script src="/content/assets/js/bootstrap-editable.min.js"></script>
@@ -179,5 +235,6 @@
     <script src="/Scripts/xml2json.js"></script>
     <script src="/Scripts/select2/select2-optinal.js?v=1.3"></script>
     <script src="/Scripts/app/DefaultGridManager.js?v=1.30"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
     <script src="/Scripts/app/Students-manager.js?v=1.30"></script>
 </asp:Content>
